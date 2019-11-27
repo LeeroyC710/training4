@@ -5,7 +5,10 @@ pipeline{
                         steps{
 			    sh '''
 			    ssh leeroychiweshe@pythontest1 << EOF 
-                            python3 -m pytest test/factorial_test.py
+			    sudo apt-get install git -y
+			    git clone https://github.com/LeeroyC710/training4.git
+			    cd ./training4
+                            python3 -m pytest ./test/factorial_test.py
 			    EOF
 			    '''
                         }
