@@ -3,7 +3,11 @@ pipeline{
         stages{ 
 		    stage('---First Test---'){
                         steps{
-                            sh "python3 -m pytest test/factorial_test.py"
+			    sh '''
+			    ssh leeroychiweshe@pythontest1 << EOF 
+                            python3 -m pytest test/factorial_test.py
+			    EOF
+			    '''
                         }
                 }
         }
