@@ -3,7 +3,7 @@ pipeline{
         stages{ 
 		    stage('---First Test---'){
                         steps{
-                            sh "factorial tests/factorial_test.py"
+                            sh "pytest tests/factorial_test.py"
                         }
                 }
         }
